@@ -1,0 +1,12 @@
+<div class="container">
+    <h3>Jacob</h3>
+
+    <mat-card class="mat-card">
+        <mat-form-field class="mat-form-field">
+            <textarea class="textarea" cols="30" rows="5" [(ngModel)]="enteredValue" placeholder="Input here.."></textarea>
+        </mat-form-field>
+        <button class="save-button" (click)="onAddPost()">Save</button>
+    </mat-card>
+
+    <textarea class="new-post-text">{{ NewPost }}</textarea>
+</div>
