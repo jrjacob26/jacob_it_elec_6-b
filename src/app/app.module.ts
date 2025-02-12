@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { PostCreateComponent } from '/home/christopher/folder1/src/app/posts /post-create/post-create.component';
 import { PostListComponent } from '/home/christopher/folder1/src/app/posts /post-list/post-list.component';
+=======
+import { PostCreateComponent } from '/home/christopher/folder1/src/app/posts / post-create/post.create.component';  // Corrected path
+import { PostListComponent } from '/home/christopher/folder1/src/app/posts /post-list/post-list.component';  // Fixed path issue
+>>>>>>> christopherdev
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

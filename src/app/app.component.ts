@@ -17,4 +17,8 @@ export class AppComponent {
   onPostAdded (post: any): void{
     this.storedPosts.push(post);
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> christopherdev
