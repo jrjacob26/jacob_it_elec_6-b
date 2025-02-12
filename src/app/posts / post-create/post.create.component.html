@@ -1,14 +1,11 @@
-<br><br>
-<div class="container">
-    <h3>1st Angular Project</h3>
+<mat-card>
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="enteredTitle" placeholder="Title">
+    </mat-form-field>
 
-    <mat-card class="mat-card">
-        <mat-form-field class="mat-form-field">
-            <textarea class="textarea" cols="30" rows="5" [(ngModel)]="enteredValue" placeholder="Input here.."></textarea>
-        </mat-form-field>
-        <button class="save-button" (click)="onAddPost()">Save</button>
-    </mat-card>
-
-    <textarea class="new-post-text">{{ NewPost }}</textarea>
-</div>
-
+    <mat-form-field>
+        <textarea rows="6" matInput [(ngModel)]="enteredContent" [ngModelOptions]="{standalone: true}" placeholder="Content"></textarea>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" (click)="onAddPost()">Save</button>
+</mat-card>

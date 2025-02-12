@@ -1,62 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
+mat-card {
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
-}
-
-.container {
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
-h3 {
-    text-align: center;
-    color: #333;
-}
-
-.mat-card {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.mat-form-field {
+mat-form-field {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
-.textarea {
+mat-form-field textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+    height: 150px;
+    resize: none;
 }
 
-.save-button {
-    background-color: #007bff;
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #3f51b5;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.save-button:hover {
-    background-color: #0056b3;
-}
-
-.new-post-text {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
 }
