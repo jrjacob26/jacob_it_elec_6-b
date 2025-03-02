@@ -1,7 +1,7 @@
 const http = require('http');
 const app = require('./backend/app');
-// const { debug } = require('console');
-const debug = require("debug")("node-angular");
+const { debug } = require('console');
+//const debug = require("debug")("node-angular");
 
 const normalizePort = val => {
     var port = parseInt(val, 10);
@@ -29,7 +29,7 @@ const onError = error => {
             process.exit(1);
             break;
         case "EADDRINUSE":
-            console.error(bind + "is alread in user");
+            console.error(bind + " is already in user");
             process.exit(1);
             break;
         default:
