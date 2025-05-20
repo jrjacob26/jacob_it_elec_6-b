@@ -1,38 +1,70 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #3f51b5; /* Material Indigo */
+  color: white;
+  height: 64px;
+}
+
+/* Spacer pushes nav links to the right */
 .spacer {
-    flex: 1 1 auto;
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.spacer a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links a,
+.nav-links button {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+button[mat-button] {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  mat-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 1rem; /* Add spacing between items */
-    margin: 0;
-    padding: 0;
-    align-items: center;
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
-  
-  .nav-list li {
-    display: inline-block;
+
+  .spacer {
+    margin-bottom: 0.5rem;
   }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header-buttons {
-    display: flex;
-    gap: 0.5rem; /* Add spacing between buttons */
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  a[mat-button], button[mat-button] {
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
+}

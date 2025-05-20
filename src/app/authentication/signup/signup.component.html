@@ -1,32 +1,41 @@
-<div class="Signup-container" *ngIf="!isLoading; else loading">
-    <mat-card>
-      <mat-card-title>Sign Up</mat-card-title>
-      <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" formControlName="email" />
-          <mat-error *ngIf="signupForm.get('email')?.hasError('required')">Email is required</mat-error>
-          <mat-error *ngIf="signupForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
-        </mat-form-field>
-  
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Password</mat-label>
-          <input matInput type="password" formControlName="password" />
-          <mat-error *ngIf="signupForm.get('password')?.hasError('required')">Password is required</mat-error>
-          <mat-error *ngIf="signupForm.get('password')?.hasError('minlength')">
-            Password must be at least 6 characters
-          </mat-error>
-        </mat-form-field>
-  
-        <button mat-raised-button color="primary" type="submit">Sign Up</button>
-      </form>
-  
-      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-    </mat-card>
+<mat-card>
+  <div *ngIf="Loading" class="spinner-container">
+    <mat-spinner diameter="50"></mat-spinner>
   </div>
-  
-  <ng-template #loading>
-    <div class="spinner-container">
-      <mat-spinner></mat-spinner>
-    </div>
-  </ng-template>
+
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!Loading">
+    <mat-form-field>
+      <input
+        matInput
+        name="email"
+        ngModel
+        type="email"
+        placeholder="Email"
+        #emailInput="ngModel"
+        required
+        email>
+      <mat-error *ngIf="emailInput.invalid && emailInput.touched">
+        Please enter a valid email id
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        name="password"
+        ngModel
+        type="password"
+        placeholder="Password"
+        #passwordInput="ngModel"
+        required
+        minlength="6">
+      <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">
+        Please enter a valid password (min 6 chars)
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit" [disabled]="signupForm.invalid">
+      Signup
+    </button>
+  </form>
+</mat-card>

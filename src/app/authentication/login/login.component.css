@@ -1,22 +1,46 @@
-.login-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-  }
-  
+mat-card {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
   mat-card {
-    width: 400px;
-    padding: 20px;
+    margin: 20px;
+    padding: 1.5rem;
   }
-  
-  .full-width {
-    width: 100%;
-    margin-bottom: 20px;
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
   }
-  
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  }
+}
