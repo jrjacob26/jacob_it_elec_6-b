@@ -16,4 +16,9 @@
       <button mat-button (click)="onLogout()">Logout</button>
     </li>
   </ul>
+
+  <!-- Dark/Light mode toggle button -->
+  <button mat-button (click)="toggleTheme()" style="margin-left: auto;">
+    {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+  </button>
 </mat-toolbar>

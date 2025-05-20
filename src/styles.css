@@ -2,3 +2,29 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Light mode (optional if default) */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* You can add more specific element styles for dark theme, e.g.: */
+body.dark-theme mat-toolbar {
+  background: #333;
+  color: #fff;
+}
+
+/* Also consider links, buttons, cards, etc. */
+body.dark-theme a {
+  color: #90caf9;
+}
+
+/* Customize as needed */
