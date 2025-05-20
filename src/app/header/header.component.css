@@ -1,0 +1,38 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Add spacing between items */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .nav-list li {
+    display: inline-block;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 0.5rem; /* Add spacing between buttons */
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  a[mat-button], button[mat-button] {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }

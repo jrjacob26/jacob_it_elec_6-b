@@ -1,0 +1,23 @@
+.Signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74vh; 
+  }
+  
+  mat-card {
+    width: 400px;
+    padding: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }

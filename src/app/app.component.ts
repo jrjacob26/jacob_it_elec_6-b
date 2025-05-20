@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface Post {
+  id: number;
+  title: any;
+  content: any;
+}
 
 @Component({
   selector: 'app-root',
@@ -7,10 +12,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'folder1';
+  title = 'Jacob';
+  // storedPosts: Post[] = [];
+  // onPostAdded(post: any): void {
+  //   this.storedPosts.push(post);
 
- // storedPosts: Post[] = [];
-//  onPostAdded (post: any): void{
- //   this.storedPosts.push(post);
- // }
+  //   }  
 }
